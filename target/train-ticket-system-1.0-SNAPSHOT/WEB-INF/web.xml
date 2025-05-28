@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0"
+         metadata-complete="false">
+
+    <display-name>Train Ticket System</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!-- Configuration pour l'encodage UTF-8 -->
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ignore</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Servlet mappings explicites pour s'assurer qu'ils sont reconnus -->
+    <servlet>
+        <servlet-name>InitServlet</servlet-name>
+        <servlet-class>controller.InitServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AuthServlet</servlet-name>
+        <servlet-class>controller.AuthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthServlet</servlet-name>
+        <url-pattern>/auth</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RechercheVoyageServlet</servlet-name>
+        <servlet-class>controller.RechercheVoyageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RechercheVoyageServlet</servlet-name>
+        <url-pattern>/recherche</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SelectionVoyageServlet</servlet-name>
+        <servlet-class>controller.SelectionVoyageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectionVoyageServlet</servlet-name>
+        <url-pattern>/selection</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PaiementServlet</servlet-name>
+        <servlet-class>controller.PaiementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PaiementServlet</servlet-name>
+        <url-pattern>/paiement</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserBilletsServlet</servlet-name>
+        <servlet-class>controller.UserBilletsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserBilletsServlet</servlet-name>
+        <url-pattern>/mes-billets</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ConfirmationServlet</servlet-name>
+        <servlet-class>controller.ConfirmationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConfirmationServlet</servlet-name>
+        <url-pattern>/confirmation</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PDFServlet</servlet-name>
+        <servlet-class>controller.PDFServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PDFServlet</servlet-name>
+        <url-pattern>/download-pdf</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>controller.TestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResetAdminServlet</servlet-name>
+        <servlet-class>controller.ResetAdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResetAdminServlet</servlet-name>
+        <url-pattern>/reset-admin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StatistiquesServlet</servlet-name>
+        <servlet-class>controller.admin.StatistiquesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StatistiquesServlet</servlet-name>
+        <url-pattern>/admin/statistiques</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DiagnosticServlet</servlet-name>
+        <servlet-class>controller.DiagnosticServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DiagnosticServlet</servlet-name>
+        <url-pattern>/diagnostic</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestUserCreationServlet</servlet-name>
+        <servlet-class>controller.TestUserCreationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestUserCreationServlet</servlet-name>
+        <url-pattern>/test-user-creation</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestPDFServlet</servlet-name>
+        <servlet-class>controller.TestPDFServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestPDFServlet</servlet-name>
+        <url-pattern>/test-pdf</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestNotificationsServlet</servlet-name>
+        <servlet-class>controller.TestNotificationsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestNotificationsServlet</servlet-name>
+        <url-pattern>/test-notifications</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestEmailDirectServlet</servlet-name>
+        <servlet-class>controller.TestEmailDirectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestEmailDirectServlet</servlet-name>
+        <url-pattern>/test-email-direct</url-pattern>
+    </servlet-mapping>
+
+    <!-- JSTL Taglib declarations -->
+    <jsp-config>
+        <taglib>
+            <taglib-uri>jakarta.tags.core</taglib-uri>
+            <taglib-location>/META-INF/c.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>jakarta.tags.fmt</taglib-uri>
+            <taglib-location>/META-INF/fmt.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
+</web-app>
