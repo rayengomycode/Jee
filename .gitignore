@@ -1,0 +1,128 @@
+# ===== JAVA & MAVEN =====
+# Compiled class files
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ===== IDE =====
+# Eclipse
+.metadata
+.classpath
+.project
+.settings/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.recommenders
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ===== SYSTÈME =====
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===== LOGS =====
+*.log
+logs/
+log/
+
+# ===== BASE DE DONNÉES =====
+# Fichiers de base de données locaux
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== CONFIGURATION SENSIBLE =====
+# Fichiers de configuration avec mots de passe
+application-local.properties
+application-dev.properties
+config/local/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===== TOMCAT =====
+# Répertoires Tomcat
+work/
+webapps/
+temp/
+
+# ===== AUTRES =====
+# Fichiers temporaires
+*.tmp
+*.temp
+*~
+
+# Fichiers de sauvegarde
+*.backup
+*.bak
+
+# Fichiers de test
+test-*.html
+debug-*.txt
